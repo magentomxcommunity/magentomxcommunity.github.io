@@ -1,0 +1,147 @@
+/* Venera badegs styles */
+
+//.label, .badge
+%extend_badges {
+	background-color: lighten($trout, 20%);
+	color: $white;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 16px;
+	padding: 2px 4px;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+
+//a.label:hover, a.badge:hover
+%extend_badges_hover {
+	color: $white;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.label {
+	@extend %extend_badges;
+}
+
+.badge {
+	@extend %extend_badges;
+	border-radius: 9px;
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+a {
+
+	&.label:hover {
+		@extend %extend_badges_hover;
+	}
+
+	&.badge:hover {
+		@extend %extend_badges_hover;
+	}
+}
+
+.label-important {
+	background-color: $cadillac;
+}
+
+.badge-important {
+	background-color: $cadillac;
+}
+
+.label-important[href] {
+	background-color: $monza;
+}
+
+.badge-important[href] {
+	background-color: $monza;
+}
+
+.label-warning {
+	background-color: $astra;
+}
+
+.badge-warning {
+	background-color: $astra;
+}
+
+.label-warning[href] {
+	background-color: $astra;
+}
+
+.badge-warning[href] {
+	background-color: $astra;
+}
+
+.label-success {
+	background-color: $olivine;
+}
+
+.badge-success {
+	background-color: $olivine;
+}
+
+.label-success[href] {
+	background-color: $aqua-forest;
+}
+
+.badge-success[href] {
+	background-color: $aqua-forest;
+}
+
+.label-info {
+	background-color: lighten($tradewin, 10%);
+}
+
+.badge-info {
+	background-color: lighten($tradewin, 10%);
+}
+
+.label-info[href] {
+	background-color: $tradewin;
+}
+
+.badge-info[href] {
+	background-color: $tradewin;
+}
+
+.label-inverse {
+	background-color: lighten($trout, 10%);
+}
+
+.badge-inverse {
+	background-color: lighten($trout, 10%);
+}
+
+.label-inverse[href] {
+	background-color: $trout;
+}
+
+.badge-inverse[href] {
+	background-color: $trout;
+}
+
+.btn {
+
+	.label {
+		position: relative;
+		top: -1px;
+	}
+
+	.badge {
+		position: relative;
+		top: -1px;
+	}
+}
+
+.btn-mini {
+
+	.label {
+		top: 0;
+	}
+
+	.badge {
+		top: 0;
+	}
+}

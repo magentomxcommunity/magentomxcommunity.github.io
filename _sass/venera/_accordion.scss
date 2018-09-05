@@ -1,0 +1,50 @@
+/* Venera accordion styles */
+
+//urls
+$url_0: url(../images/accordion-on.png);
+
+.accordion {
+	margin-bottom: 20px;
+}
+
+.accordion-group {
+	margin-bottom: 2px;
+}
+
+.accordion-heading {
+	border-bottom: 0;
+
+	.accordion-toggle {
+		background: light($trout, 90%) $url_0 97% center no-repeat;
+		border-bottom: 1px solid $olivine;
+		box-shadow: 1px 1px 2px $white inset, 1px 1px 3px 0 $olivine;
+		color: $trout;
+		display: block;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 2px;
+		padding: 15px 20px;
+		text-shadow: -1px 0 0 $white;
+
+		&:hover {
+			margin-bottom: 4px;
+			margin-top: -2px;
+			text-decoration: none;
+		}
+	}
+}
+
+.accordion-toggle {
+	cursor: pointer;
+}
+
+.accordion-inner {
+	background-color: $white;
+	border-bottom: 1px solid $trout;
+	color: $trout;
+	font-family: $font-family;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 1px;
+	padding: 15px 20px;
+}

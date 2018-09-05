@@ -1,0 +1,153 @@
+/* Venera custom tab styles */
+
+//.tabbable:before, .tabbable:after
+%extend_tabbable {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+
+//.tabs-left >.nav-tabs >li >a, .tabs-right >.nav-tabs >li >a
+%extend_tabs {
+  margin-bottom: 3px;
+  margin-right: 0;
+  min-width: 74px;
+}
+
+
+.tabbable {
+  *zoom: 1;
+  
+  &:before {
+    @extend %extend_tabbable;
+  }
+  
+  &:after {
+    @extend %extend_tabbable;
+    clear: both;
+  }
+}
+
+.tab-content {
+  background-color: $white;
+  box-shadow: 0 1px 4px 1px $trout, 2px 2px 1px 0 $white inset;
+  color: $trout;
+  font-family: $font-family;
+  overflow: auto;
+  padding: 20px;
+
+  > {
+
+    .tab-pane {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+  }
+}
+
+.tabs-stacked .open > a:hover {
+  border-color: $trout;
+}
+
+.tabs-below > .nav-tabs {
+  border-bottom: 0;
+  border-top: 1px solid $trout;
+  
+  > li {
+    margin-bottom: 0;
+    margin-top: -1px;
+    
+    > a {
+      border-radius: 0 0 4px 4px;
+
+      &:hover {
+        border-bottom-color: transparent;
+        border-top-color: $trout;
+      }
+    }
+  }
+  
+  > .active > a {
+    border-color: transparent $trout $trout $trout;
+  
+    &:hover {
+      border-color: transparent $trout $trout $trout;
+    }
+  }
+}
+
+.tabs-right > .nav-tabs {
+  border-bottom: 0;
+  border-left: 1px solid $trout;
+  float: right;
+  margin-left: 19px;
+
+  > li {
+    float: none;
+
+    > a {
+      @extend %extend_tabs;
+      border-radius: 0 4px 4px 0;
+      margin-left: -1px;
+
+      &:hover {
+        border-color: $trout $trout $trout $trout;
+      }
+    }
+  }
+
+  .active > a {
+    border-color: $trout $trout $trout transparent;
+    *border-left-color: $white;
+    
+    &:hover {
+      border-color: $trout $trout $trout transparent;
+      *border-left-color: $white;
+    }
+  }
+}
+
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+  border-right: 1px solid $trout;
+  float: left;
+  margin-right: 19px;
+
+  > li {
+    float: none;
+    
+    > a {
+      @extend %extend_tabs;
+      border-radius: 4px 0 0 4px;
+      margin-right: -1px;
+
+      &:hover {
+        border-color: $trout $trout $trout $trout;
+      }
+    }
+  }
+  
+  .active > a {
+    border-color: $trout transparent $trout $trout;
+    *border-right-color: $white;
+  
+    &:hover {
+      border-color: $trout transparent $trout $trout;
+      *border-right-color: $white;
+    }
+  }
+}
+
+.pill-content > {
+  
+  .pill-pane {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+}

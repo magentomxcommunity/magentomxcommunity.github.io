@@ -1,0 +1,68 @@
+/* Venera wrapper styles */
+
+//urls
+$url_0: url(../images/stripped-bg.png);
+
+.just-stripped {
+	background: transparent $url_0 left top repeat;
+}
+
+.section-wrapper {
+	padding-bottom: 30px;
+	padding-top: 30px;
+
+	&.stripped {
+		background: transparent $url_0 left top repeat;
+	}
+
+	&.under-slider {
+		border-top: 3px solid $white;
+	}
+
+	.section-main-header {
+		border-bottom: 1px dashed $astra;
+		font-size: 36px;
+		font-weight: bold;
+		margin-bottom: 30px;
+		padding-bottom: 15px;
+	}
+	
+	.section-header {
+		border-bottom: 3px solid $aqua-forest;
+		box-shadow: 0 1px 0 $aqua-forest;
+		color: $trout;
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 30px;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+	}
+
+	.section-paragraph {
+		font-size: 18px;
+		line-height: 30px;
+	}
+	
+	.section-action {
+		border-bottom: 1px dashed $astra;
+		border-top: 1px dashed $astra;
+		margin-bottom: 30px;
+		margin-top: 30px;
+		padding-bottom: 30px;
+		padding-top: 30px;
+		text-align: center;
+	
+		.btn {
+			text-transform: uppercase;
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding-left: 20px;
+    padding-right: 20px;
+	}
+}
+
+.row-separated {
+	margin-bottom: 40px;
+}

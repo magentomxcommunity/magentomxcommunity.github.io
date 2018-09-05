@@ -2,23 +2,36 @@
 layout: default
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<section class='section-wrapper not-found-w'>
+  <div class='container'>
+    <div class='row'>
+      <div class='span4'>
+        <img alt="Not-found-error" src="../assets/images/not-found-error.png" />
+      </div>
+      <div class='span8'>
+        <h1>404</h1>
+        <h4>Lo sentimos, la página que buscas no existe.</h4>
+        <p>Intenta alguno de las siguientes soluciones que tenemos para tí...</p>
+        <div class='not-found-solutions btn-group'>
+          <a href="#" class="btn"><i class='icon-circle-arrow-left'></i>Vuelve a la página anterior</a>
+          <a href="#" class="btn"><i class='icon-home'></i>Ve a la página de inicio</a>
+          <a href="#" class="btn"><i class='icon-th-list'></i>Revisa nuestrso últimos blog posts</a>
+        </div>
+        <!-- Commented until we have search functionality -->
+        <!-- <div class='white-card extra-padding'>
+          <form class='no-margin-bottom form-search'>
+            <fieldset>
+              <legend>O realiza de nuevo tú búsqueda</legend>
+              <div class='control-group'>
+                <div class='input-append'>
+                  <input class='span3 search-query' placeholder='Términos de búsqueda...' type='text'>
+                  <button class='btn' type='submit'>Buscar</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>

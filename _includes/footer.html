@@ -1,0 +1,63 @@
+<footer>
+  <div class='pre-footer'>
+    <div class="container">
+      <div class="row">
+        <div class="span4">
+          <div class="footer-logo">
+            <a>Magento<strong>Mx</strong></a>
+          </div>
+          <ul class="footer-address">
+            <li>¡Estamos donde quiera que hay<br/>un Magento Dev en México!</li>
+            <li>(###) ###-####</li>
+          </ul>
+        </div>
+        <div class="span4">
+          <h5 class='footer-header'>Blog</h5>
+          {%- if site.posts.size > 0 -%}
+          <ul class='footer-list'>
+            {%- for post in site.posts limit: 4 -%}
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
+        </div>
+        <div class="span4">
+          <h5 class='footer-header'>Comunidad</h5>
+          <ul class='footer-img-list thumbnails'>
+            <li class='span1'>
+              <a class='thumbnail'>
+                <img alt="8b9890" src="/assets/images/test-square.png" />
+              </a>
+            </li>
+            <!-- Add here real images of the comunity, like events, our logo, partnerships, etc -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="deep-footer">
+    <div class="container">
+      <div class="row">
+        <div class="span6">
+          <div class="copyright">
+            Copyright &copy; 2018 Magento MX Community
+          </div>
+        </div>
+        <div class="span6">
+          <ul class="footer-links">
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contribuciones/">Contribuciones</a></li>
+            <li><a href="/comunidad/">Comunidad</a></li>
+            <li><a href="/unete/">Únete</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="/assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="/assets/js/prettify.js" type="text/javascript"></script>
+<script src="/assets/js/lightbox.js" type="text/javascript"></script>
+<script src="/assets/js/main.js" type="text/javascript"></script>
