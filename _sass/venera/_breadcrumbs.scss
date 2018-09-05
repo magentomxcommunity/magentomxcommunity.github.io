@@ -1,0 +1,42 @@
+/* Venera breadcrumbs styles */
+
+//urls
+$url_0: url(../images/breadcrumb-white.png);
+
+.breadcrumb {
+	background-color: $white;
+	box-shadow: 0 1px 4px 1px $trout, 2px 2px 1px 0 $white inset;
+	margin: 0 0 20px;
+	list-style: none;
+
+	li {
+		background: $white $url_0 right center no-repeat;
+		display: inline-block;
+		*display: inline;
+		font-size: 18px;
+		margin-right: 0;
+		padding: 20px;
+		padding-right: 40px;
+		*zoom: 1;
+		
+		a {
+			color: $trout;
+			transition: all 400ms ease;
+
+			&:hover {
+				padding-right: 4px;
+				text-decoration: none;
+			}
+		}
+	}
+	
+	.divider {
+		padding: 0 5px;
+		color: $aqua-forest;
+	}
+	
+	.active {
+		color: $aqua-forest;
+		background: none;
+	}
+}

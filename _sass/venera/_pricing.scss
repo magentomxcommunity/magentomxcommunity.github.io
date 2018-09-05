@@ -1,0 +1,105 @@
+/* Venera pricing style */
+
+.pricing-table {
+	
+	.plan-name {
+		border-bottom: 1px solid $trout;
+		font-size: 32px;
+		font-weight: 300;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	
+	.pricing-plan-w {
+		border-left: 1px solid $trout;
+		border-right: 1px solid $trout;
+		padding: 20px;
+		text-align: center;
+		
+		&.first-plan {
+			border-left: none;
+		}
+		
+		&.last-plan {
+			border-right: none;
+		}
+	}
+	
+	.plan-price-w {
+		border-bottom: 1px solid $trout;
+		margin-bottom: 15px;
+		padding-bottom: 20px;
+	}
+	
+	.plan-price-desc {
+		color: $aqua-forest;
+		font-size: 16px;
+		font-weight: 300;
+		margin-bottom: 5px;
+		text-transform: lowercase;
+	}
+	
+	.plan-price {
+		line-height: 84px;
+	}
+	
+	.price-currency {
+		display: inline-block;
+		*display: inline;
+		font-size: 32px;
+		font-weight: 300;
+		vertical-align: top;
+		vertical-align: middle;
+		*vertical-align: auto;
+	}
+	
+	.price-self {
+		display: inline-block;
+		*display: inline;
+		font-size: 72px;
+		font-weight: 300;
+		vertical-align: bottom;
+		vertical-align: middle;
+		*vertical-align: auto;
+	}
+	
+	.price-period {
+		color: $aqua-forest;
+		display: inline-block;
+		*display: inline;
+		font-size: 24px;
+		vertical-align: middle;
+		vertical-align: bottom;
+		*vertical-align: auto;
+	}
+	
+	.plan-desc {
+	
+		p {
+			background-color: lighten($astra, 90%);
+			border: 2px solid $trout;
+			padding: 10px;
+			color: $trout;
+			margin-bottom: 20px;
+		}
+		
+		ul {
+			list-style: none;
+			margin: 0;
+			margin-bottom: 20px;
+			padding: 0;
+			
+			li {
+				border-bottom: 1px solid $trout;
+				font-size: 18px;
+				padding: 10px 0;
+			
+				strong {
+					background-color: $trout;
+				}
+			}
+		}
+	}
+}

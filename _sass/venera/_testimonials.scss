@@ -1,0 +1,91 @@
+/* Venera testimonials styles */
+
+//urls
+$url_0: url(../images/quotes.png);
+
+//.testimonials .testimonials-user-w.active .testimonials-user, .testimonials .testimonials-user-w:hover .testimonials-user
+%extend_testimonials {
+	box-shadow: 3px 3px 0 0 $olivine;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+}
+
+
+.testimonials {
+	margin-bottom: 20px;
+	
+	.testimonials-user {
+		border: 5px solid $white;
+		border-radius: 50%;
+		box-shadow: -3px -3px 0 0 $olivine;
+		cursor: pointer;
+		display: block;
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+		margin-bottom: 30px;
+		opacity: 0.4;
+		position: relative;
+		text-align: center;
+		transition: all 400ms ease;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	.testimonials-user-w {
+		display: block;
+		position: relative;
+
+		&.active {
+
+			.testimonials-user {
+				@extend %extend_testimonials;
+			}
+
+			&:before {
+				background-color: transparent;
+				border-bottom-color: $white;
+				border-color: transparent;
+				border-style: solid;
+				border-width: 0 20px 20px;
+				bottom: -30px;
+				content: "";
+				height: 0;
+				left: 50%;
+				margin-left: -20px;
+				position: absolute;
+				width: 0;
+			}
+		}
+
+		&:hover .testimonials-user {
+			@extend %extend_testimonials;
+		}
+	}
+
+	.testimonials-speech {
+		box-shadow: 0 1px 4px 1px $olivine;
+		background: $white $url_0 15px 20px no-repeat;
+		color: $trout;
+		display: none;
+		font-family: $font-family;
+		font-size: 17px;
+		line-height: 24px;
+		padding: 20px;
+		padding-left: 70px;
+
+		p {
+			border-bottom: 1px solid $olivine;
+			padding-bottom: 15px;
+		}
+		
+		&.active {
+			display: block;
+		}
+	}
+	
+	.speech-by {
+		text-align: right;
+		font-size: 16px;
+	}
+}

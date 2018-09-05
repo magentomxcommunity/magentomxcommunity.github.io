@@ -1,0 +1,30 @@
+/* Venera not-found styles */
+
+//.not-found-w h4, .coming-soon-w h4
+%extend_not_found {
+	border-bottom: 1px dashed $trout;
+	padding-bottom: 15px;
+	font-weight: 300;
+}
+
+.not-found-w {
+	
+	h4 {
+		@extend %extend_not_found;
+	}
+	
+	.not-found-solutions {
+		margin-bottom: 30px;
+	}
+}
+
+.coming-soon-w {
+
+	h4 {
+		@extend %extend_not_found;
+	}
+
+	.not-found-solutions {
+		margin-bottom: 30px;
+	}
+}

@@ -1,0 +1,63 @@
+/* Venera media styles */
+
+//.media, .media-body
+%extend_media {
+	overflow: hidden;
+	*overflow: visible;
+	zoom: 1;
+}
+
+.media {
+	@extend %extend_media;
+	margin-top: 15px;
+	
+	.media {
+		margin-top: 15px;
+	}
+	
+	&:first-child {
+		margin-top: 0;
+	}
+	
+	.pull-left {
+		margin-right: 10px;
+
+		@media (max-width: 480px) {
+    	display: block;
+			float: none;
+    	margin-bottom: 10px;
+		}
+	}
+	
+	.pull-right {
+		margin-left: 10px;
+
+		@media (max-width: 480px) {
+    	display: block;
+			float: none;
+    	margin-bottom: 10px;
+		}
+	}
+}
+
+.media-body {
+	@extend %extend_media;
+}
+
+.media-object {
+	display: block;
+
+	@media (max-width: 480px) {
+  	margin-right: 0;
+    margin-left: 0;
+	}
+}
+
+.media-heading {
+	margin: 0 0 5px;
+}
+
+.media-list {
+	margin-left: 0;
+	list-style: none;
+}

@@ -1,0 +1,137 @@
+/* Venera thumbnail styles */
+
+//.thumbnails:before, .thumbnails:after
+%extend_thumbnails {
+	content: "";
+	display: table;
+	line-height: 0;
+}
+
+.thumbnails {
+	margin-left: -20px;
+	list-style: none;
+	*zoom: 1;
+
+	&:before {
+		@extend %extend_thumbnails;
+	}
+
+	&:after {
+		@extend %extend_thumbnails;
+		clear: both;
+	}
+
+	> li {
+		float: left;
+		margin-bottom: 20px;
+		margin-left: 20px;
+
+		@media (min-width: 1200px) {
+			margin-left: 30px;
+		}
+
+		@media (max-width: 767px) {
+			float: none;
+    	margin-left: 0;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		margin-left: -30px;
+	}
+
+	@media (max-width: 767px) {
+		margin-left: 0;
+	}
+}
+
+.thumbnail {
+	background-color: $white;
+	background-image: linear-gradient(to bottom, lighten($astra, 80%), $white);
+	background-repeat: repeat-x;
+	box-shadow: 0 1px 4px 1px $trout, 2px 2px 1px 0 $white inset;
+	display: block;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f9f4', endColorstr='#fffdfdfb', GradientType=0);
+	line-height: 20px;
+	padding: 4px;
+	transition: all 0.2s ease-in-out;
+
+	&.with-content {
+		position: relative;
+	}
+	
+	> img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+	}
+	
+	.caption {
+		padding: 9px;
+		color: $trout;
+	}
+}
+
+.row-fluid .thumbnails {
+	margin-left: 0;
+}
+
+a.thumbnail:hover {
+	box-shadow: 0 0 8px 4px $trout;
+}
+
+.thumbnail-hover-title {
+	border-bottom: 1px solid lighten($trout, 5%);
+	color: $white;
+	font-size: 16px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+
+	@media (min-width: 768px) and (max-width: 979px) {
+		border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+	}
+
+	@media (max-width: 767px) {
+		border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+	}
+}
+
+.thumbnail-hover-text {
+	color: lighten($trout, 20%);
+
+	@media (min-width: 768px) and (max-width: 979px) {
+		display: none;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.thumbnail.with-content {
+	
+	.thumbnail-hover-w {
+		background-color: $trout;
+		bottom: -100%;
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		left: 0;
+		max-height: 90%;
+		opacity: 0;
+		overflow: hidden;
+		padding: 10px;
+		position: absolute;
+		transition: bottom 0.2s linear, opacity 0.5s linear;
+	}
+
+	&:hover .thumbnail-hover-w {
+		bottom: 0;
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity: 1;
+		transition-delay: 0s;
+	}
+}

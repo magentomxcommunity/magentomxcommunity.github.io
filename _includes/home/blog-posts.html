@@ -1,0 +1,34 @@
+{%- if site.posts.size > 0 -%}
+<section class='section-wrapper stripped'>
+  <div class='container'>
+    <div class='row'>
+      <div class='span12'>
+        <h3 class='section-header'>Lo último en el Blog</h3>
+      </div>
+      {%- for post in site.posts limit: 3 -%}
+      <div class='span4'>
+        <div class='white-card recent-post clearfix'>
+          <h5 class='recent-post-header'>
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h5>
+          <div class='post-info clearfix'>
+            <div class='pull-left'>
+              <span class='post-date'>{{ post.date | date: '%B %d, %Y' }}</span>
+              <!-- Comment untul we get comments functionality -->
+              <!-- <a href="{{ post.url | relative_url }}" class="post-comments">14 Comments</a> -->
+            </div>
+            <!-- Comment untul we get social like functionality -->
+            <!-- <div class='pull-right'>
+              <a href="#" class="post-like"><i class='icon-heart'></i>250</a>
+            </div> -->
+          </div>
+          <img alt="{{ post.title }}" class="post-image" src="{{ post.image }}" />
+          <p class='post-content separated'>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-extra pull-right">Read More &gt;</a>
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}

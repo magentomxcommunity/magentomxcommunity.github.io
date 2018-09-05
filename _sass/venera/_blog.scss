@@ -1,0 +1,340 @@
+/* Venera blog styles */
+
+.recent-post {
+	margin-bottom: 20px;
+	
+	.recent-post-header {
+		border-bottom: 1px solid $aqua-forest;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		padding-top: 5px;
+
+		a {
+			color: $trout;
+		}
+	}
+	
+	.post-info {
+		color: $trout;
+		font-size: 12px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	
+	.post-date {
+		//border-right: 1px solid $trout; /* Comment until we get comments functionality */
+		margin-right: 5px;
+		padding-right: 5px;
+	}
+	
+	.post-comments {
+		color: $trout;
+	}
+	
+	.post-like {
+		background: $white;
+		border-radius: 3px;
+		box-shadow: inset 1px 1px 1px 0 $white;
+		color: $trout;
+		padding: 5px 10px;
+		transition: all 200ms linear;
+
+		i {
+			color: $olivine;
+			margin-right: 5px;
+			text-shadow: 1px 1px 0 $white, -1px -1px 0 $aqua-forest;
+			transition: all 200ms linear;
+		}
+
+		&:hover {
+			background-color: $cadillac;
+			color: $white;
+			text-decoration: none;
+
+			i {
+				color: $white;
+				text-shadow: 1px 1px 0 $monza;
+			}
+		}
+	}
+	
+	.post-image {
+		box-shadow: 0 0 2px 2px $white;
+		margin-bottom: 15px;
+	}
+
+	.post-image-full-width {
+		margin-bottom: 15px;
+	}
+
+	.post-image-aside {
+		margin-bottom: 10px;
+	}
+
+	.post-content {
+		margin-bottom: 15px;
+		font-size: 16px;
+	}
+
+	.separated {
+		border-bottom: 1px solid $aqua-forest;
+		box-shadow: 0 1px 0 0 $white;
+		padding-bottom: 15px;
+	}
+}
+
+.single-post-w {
+	background-color: $white;
+	box-shadow: 0 1px 4px 1px $trout;
+	margin-bottom: 30px;
+	padding: 20px;
+
+	.post-title {
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-bottom: 20px;
+		padding-top: 0;
+	}
+
+	.post-info {
+		border: 1px solid $trout;
+		box-shadow: 0 1px 2px 0 $trout;
+		margin-bottom: 15px;
+		padding: 10px;
+
+		.info-item {
+			border-right: 1px solid $trout;
+			font-size: 12px;
+			margin-right: 10px;
+			padding-right: 10px;
+			text-transform: uppercase;
+			
+			.label {
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			
+			a.post-tag {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	.post-content {
+		font-family: $font-family;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	.single-post-image.bottom {
+		margin-bottom: 25px;
+	}
+
+	@media (min-width: 1200px) {
+		padding: 30px 35px;
+	}
+}
+
+.blog-side-tags {
+	ul {
+		list-style: none;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			*display: inline;
+			margin: 0 10px 10px 0;
+			position: relative;
+			vertical-align: middle;
+			*vertical-align: auto;
+		}
+	}
+	
+	.side-tag {
+		background-color: $trout;
+		box-shadow: 2px 2px 0 $white;
+		color: $white;
+		display: inline-block;
+		*display: inline;
+		font-size: 16px;
+		height: 34px;
+		line-height: 34px;
+		margin-left: 14px;
+		position: relative;
+		padding: 0 24px 0 20px;
+		text-shadow: -1px -1px 0 $trout;
+		vertical-align: middle;
+		*vertical-align: auto;
+
+		&:hover {
+			background-color: $aqua-forest;
+			text-decoration: none;
+			
+			&:before {
+				border-color: transparent $aqua-forest transparent transparent;
+			}
+		}
+		
+		&:before {
+			border-color: transparent $trout transparent transparent;
+			border-style: solid;
+			border-width: 17px 17px 17px 0;
+			content: "";
+			float: left;
+			height: 0;
+			left: -17px;
+			position: absolute;
+			top: 0;
+			width: 0;
+		}
+		
+		&:after {
+			background: $white;
+			box-shadow: -2px -2px 0 $trout;
+			content: "";
+			float: left;
+			height: 8px;
+			left: 0;
+			position: absolute;
+			top: 14px;
+			width: 8px;
+		}
+	}
+}
+
+.blog-side-search .search-input {
+	background-color: $white;
+	border: 2px solid $trout;
+	box-shadow: none;
+	color: $trout;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.blog-categories ul {
+	list-style: none;
+	margin: 0;
+	
+	li {
+		margin-bottom: 7px;
+	
+		a {
+			background-color: lighten($olivine, 90%);
+			box-shadow: 1px 1px 2px $trout;
+			border-left: 5px solid $trout;
+			color: $trout;
+			display: block;
+			padding: 9px 10px;
+			transition-duration: 0.3s;
+			transition-duration: 0.5s;
+			transition-property: border-width;
+			transition-property: background-color;
+			transition-property: border-color;
+
+			&:hover {
+				background-color: $white;
+				border-left: 15px solid $trout;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.blog-recent-tweets ul {
+	list-style: none;
+	margin: 0;
+
+	li {
+		background-color: $white;
+		box-shadow: 2px 2px 1px $trout;
+		margin-bottom: 10px;
+		padding: 15px;
+	}
+}
+
+.post-author-w {
+	margin-bottom: 30px;
+	
+	.post-author-photo {
+		border: 5px solid $white;
+		border-radius: 50%;
+		box-shadow: 3px 3px 0 0 $trout;
+		margin-bottom: 30px;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.post-author-bio-w {
+		font-size: 16px;
+		font-family: $font-family;
+		line-height: 24px;
+		
+		.post-author-name {
+			border-bottom: 1px dashed $trout;
+			font-size: 18px;
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+.post-comments-w {
+	margin-bottom: 30px;
+}
+
+.post-comments-list {
+	list-style: none;
+	margin: 0;
+	margin-bottom: 30px;
+
+	li {
+		border-bottom: 1px dashed $trout;
+		margin-bottom: 15px;
+		overflow: hidden;
+		padding-bottom: 10px;
+		*zoom: 1;
+
+		.comment-author-photo {
+			border: 5px solid $white;
+			border-radius: 50%;
+			box-shadow: 3px 3px 0 0 $trout;
+			margin-bottom: 30px;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.comment-author {
+			padding: 10px;
+			padding-top: 0;
+		}
+		
+		.comment-content {
+			background-color: lighten($astra, 90%);
+			box-shadow: 1px 1px 4px 1px $trout;
+			font-family: $font-family;
+			margin-bottom: 5px;
+			padding: 15px 20px;
+			position: relative;
+
+			&:before {
+				border-color: transparent lighten($astra, 90%) transparent transparent;
+				border-style: solid;
+				border-width: 14px 14px 14px 0;
+				content: "";
+				float: left;
+				height: 0;
+				left: -14px;
+				position: absolute;
+				top: 0;
+				width: 0;
+			}
+		}
+		
+		.comment-date {
+			font-size: 10px;
+			padding-left: 10px;
+		}
+	}
+}

@@ -1,0 +1,934 @@
+/* General button styles */
+
+//.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled]
+%extend_btn_states {
+	color: $trout;
+	background-color: $aqua_forest;
+	*background-color: $aqua_forest;
+	background-image: linear-gradient(to bottom, $aqua_forest, $aqua_forest);
+	background-repeat: repeat-x;
+}
+
+//.btn.active, .btn:active
+%extend_btn_active {
+	background-color: $trout;
+	background-image: none;
+	box-shadow: inset 0 2px 4px $trout, 0 1px 2px $trout;
+	outline: 0;
+}
+
+//.btn.disabled, .btn[disabled]
+%extend_btn_disabled {
+	background-color: $trout;
+	background-image: none;
+	box-shadow: none;
+	cursor: default;
+	filter: alpha(opacity=65);
+	opacity: 0.65;
+}
+
+//.btn-bright:hover, .btn-bright:active, .btn-bright.active, .btn-bright.disabled, .btn-bright[disabled]
+%extend_btn_bright_states {
+	color: $white;
+	background-color: $cadillac;
+	*background-color: $cadillac;
+}
+
+//.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled]
+%extend_btn_primary_states {
+	color: $white;
+	background-color: $monza;
+	*background-color: $monza;
+}
+
+//.btn-warning:hover, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled]
+%extend_btn_warning_states {
+	color: $aqua_forest;
+	background-color: $astra;
+	*background-color: $astra;
+}
+
+//.btn-danger:hover, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled]
+%extend_btn_danger_states {
+	color: $white;
+	background-color: $monza;
+	*background-color: $monza;
+}
+
+//.btn-success:hover, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled]
+%extend_btn_success_states {
+	color: $white;
+	background-color: $aqua_forest;
+	*background-color: $aqua_forest;
+}
+
+//.btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled]
+%extend_btn_info {
+	color: $white;
+	background-color: $tradewin;
+	*background-color: $tradewin;
+}
+
+//.btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled]
+%extend_btn_inverse_states {
+	color: $white;
+	background-color: $aqua_forest;
+	*background-color: $aqua_forest;
+}
+
+//.btn-gray:hover, .btn-gray:active, .btn-gray.active, .btn-gray.disabled, .btn-gray[disabled]
+%extend_btn_gray_states {
+	color: $trout;
+	background-color: lighten($trout, 30%);
+	*background-color: lighten($trout, 30%);
+}
+
+//.btn-link, .btn-link:active, .btn-link[disabled]
+%extend_btn_link {
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+}
+
+.typeahead {
+	border-radius: 4px;
+	margin-top: 2px;
+}
+
+.well {
+	background-color: $olivine;
+	border: 1px solid $white;
+	box-shadow: inset 0 3px 1px $trout;
+	margin-bottom: 20px;
+	min-height: 20px;
+	padding: 19px;
+
+	blockquote {
+		border-color: $trout;
+	}
+}
+
+.well-large {
+	padding: 24px;
+}
+
+.well-small {
+	padding: 9px;
+}
+
+.fade {
+	opacity: 0;
+	transition: opacity 0.15s linear;
+
+	&.in {
+		opacity: 1;
+	}
+}
+
+.collapse {
+	height: 0;
+	overflow: hidden;
+	position: relative;
+	transition: height 0.35s ease;
+
+	&.in {
+		height: auto;
+	}
+}
+
+.close {
+	color: $trout;
+	filter: alpha(opacity=20);
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	opacity: 0.2;
+	text-shadow: 0 1px 0 $white;
+
+	&:hover {
+		color: $trout;
+		cursor: pointer;
+		filter: alpha(opacity=40);
+		opacity: 0.4;
+		text-decoration: none;
+	}
+}
+
+button {
+	
+	&.close {
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+		padding: 0;
+	}
+	
+	&.btn {
+		*padding-bottom: 3px;
+		*padding-top: 3px;
+	
+		&.btn-large {
+			*padding-bottom: 7px;
+			*padding-top: 7px;
+		}
+	
+		&.btn-small {
+			*padding-bottom: 3px;
+			*padding-top: 3px;
+		}
+	
+		&.btn-mini {
+			*padding-bottom: 1px;
+			*padding-top: 1px;
+		}
+	}
+	
+	&.btn::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+.btn {
+	background-color: $trout;
+	*background-color: $trout;
+	background-image: linear-gradient(to bottom, $trout, $trout);
+	background-repeat: repeat-x;
+	border: 1px solid $trout;
+	*border: 0;
+	border-bottom-color: $white;
+	border-color: $white $white $white;
+	border-radius: 4px;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$white, endColorstr=$white, GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	font-size: 16px;
+	line-height: 22px;
+	*line-height: 22px;
+	margin-bottom: 0;
+	*margin-left: .3em;
+	padding: 4px 12px;
+	text-align: center;
+	text-shadow: 0 1px 1px $trout;
+	vertical-align: middle;
+	*zoom: 1;
+
+	&:hover {
+		@extend %extend_btn_states;
+		background-color: $aqua_forest;
+		*background-color: $aqua_forest;
+		color: $white;
+		text-decoration: none;
+		transition: background-position 0.1s linear;
+	}
+
+	&:active {
+		@extend %extend_btn_states;
+		@extend %extend_btn_active;
+		background-color: $aqua_forest \9;
+	}
+	
+	&.active {
+		@extend %extend_btn_states;
+		@extend %extend_btn_active;
+		background-color: $aqua_forest \9;
+	}
+	
+	&.disabled {
+		@extend %extend_btn_states;
+		@extend %extend_btn_disabled;
+	}
+	
+	&:first-child {
+		trout-left: 0;
+	}
+	
+	&:focus {
+		outline: thin dotted $trout;
+		outline-offset: -2px;
+	}
+	
+	.caret {
+		margin-top: 8px;
+		margin-left: 0;
+	}
+}
+
+.btn[disabled] {
+	@extend %extend_btn_states;
+	@extend %extend_btn_disabled;
+}
+
+.btn-large {
+	border-radius: 6px;
+	font-size: 18.75px;
+	padding: 11px 19px;
+	
+	[class^="icon-"] {
+		margin-top: 2px;
+	}
+	
+	[class*=" icon-"] {
+		margin-top: 2px;
+	}
+	
+	.caret {
+		border-left-width: 5px;
+		border-right-width: 5px;
+		border-top-width: 5px;
+		margin-top: 6px;
+	}
+}
+
+.btn-small {
+	border-radius: 3px;
+	font-size: 12.75px;
+	padding: 2px 10px;
+
+	[class^="icon-"] {
+		margin-top: 0;
+	}
+
+	[class*=" icon-"] {
+		margin-top: 0;
+	}
+
+	.caret {
+		margin-top: 6px;
+	}
+}
+
+.btn-mini {
+	border-radius: 3px;
+	font-size: 11.25px;
+	padding: 1px 6px;
+
+	.caret {
+		margin-top: 6px;
+	}
+}
+
+.btn-block {
+	box-sizing: border-box;
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+
+	+ .btn-block {
+		margin-top: 5px;
+	}
+}
+
+input[type="submit"] {
+
+	&.btn-block {
+		width: 100%;
+	}
+
+	&.btn {
+		*padding-bottom: 3px;
+		*padding-top: 3px;
+
+		&.btn-large {
+			*padding-bottom: 7px;
+			*padding-top: 7px;
+		}
+
+		&.btn-small {
+			*padding-top: 3px;
+			*padding-bottom: 3px;
+		}
+
+		&.btn-mini {
+			*padding-top: 1px;
+			*padding-bottom: 1px;
+		}
+	}
+
+	&.btn::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}
+
+.btn-primary {
+	background-color: $trout;
+	*background-color: $trout;
+	background-image: linear-gradient(to bottom, $trout, $trout);
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7d8176', endColorstr='#ff70746a', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 -1px 0 $trout;
+
+	&.active {
+		color: $white;
+		@extend %extend_btn_primary_states;
+		background-color: $aqua_forest \9;
+	}
+
+	&:hover {
+		@extend %extend_btn_primary_states;
+	}
+
+	&:active {
+		@extend %extend_btn_primary_states;
+		background-color: $aqua_forest \9;
+	}
+
+	&.disabled {
+		@extend %extend_btn_primary_states;
+	}
+
+	.caret {
+		border-top-color: $white;
+		border-bottom-color: $white;
+	}
+}
+
+.btn-warning {
+	background-color: $astra;
+	*background-color: $astra;
+	background-image: linear-gradient(to bottom, $white, $astra);
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $trout;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffff7d3', endColorstr='#fff8ebac', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 1px 1px $white;
+
+	&.active {
+		color: $white;
+		@extend %extend_btn_warning_states;
+		background-color: $astra \9;
+	}
+
+	&:hover {
+		@extend %extend_btn_warning_states;
+	}
+
+	&:active {
+		@extend %extend_btn_warning_states;
+		background-color: $astra \9;
+	}
+
+	&.disabled {
+		@extend %extend_btn_warning_states;
+	}
+
+	.caret {
+		border-top-color: $white;
+		border-bottom-color: $white;
+	}
+}
+
+.btn-danger {
+	background-color: $cadillac;
+	*background-color: $cadillac;
+	background-image: linear-gradient(to bottom, $cadillac, $monza);
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe08e79', endColorstr='#ffce7f6b', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 -1px 0 $trout;
+
+	&.active {
+		color: $white;
+		@extend %extend_btn_danger_states;
+		background-color: $monza \9;
+	}
+
+	&:hover {
+		@extend %extend_btn_danger_states;
+	}
+
+	&:active {
+		@extend %extend_btn_danger_states;
+		background-color: $monza \9;
+	}
+
+	&.disabled {
+		@extend %extend_btn_danger_states;
+	}
+
+	.caret {
+		border-top-color: $white;
+		border-bottom-color: $white;
+	}
+}
+
+.btn-success {
+	background-color: $aqua_forest;
+	*background-color: $aqua_forest;
+	background-image: linear-gradient(to bottom, $olivine, $aqua_forest);
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb9cf7f', endColorstr='#ffaabf70', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 -1px 0 $trout;
+
+	&.active {
+		color: $white;
+		@extend %extend_btn_success_states;
+		background-color: $aqua_forest \9;
+	}
+
+	&:hover {
+		@extend %extend_btn_success_states;
+	}
+
+	&:active {
+		@extend %extend_btn_success_states;
+		background-color: $aqua_forest \9;
+	}
+
+	&.disabled {
+		@extend %extend_btn_success_states;
+	}
+
+	.caret {
+		border-top-color: $white;
+		border-bottom-color: $white;
+	}
+}
+
+.btn-info {
+	background-color: $tradewin;
+	*background-color: $tradewin;
+	background-image: linear-gradient(to bottom, $white, $tradewin);
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff40a39f', endColorstr='#ff69adaa', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 -1px 0 $trout;
+
+	&.active {
+		color: $white;
+		@extend %extend_btn_info;
+		background-color: $tradewin \9;
+	}
+
+	&:hover {
+		@extend %extend_btn_info;
+	}
+
+	&:active {
+		@extend %extend_btn_info;
+		background-color: $tradewin \9;
+	}
+
+	&.disabled {
+		@extend %extend_btn_info;
+	}
+
+	.caret {
+		border-top-color: $white;
+		border-bottom-color: $white;
+	}
+}
+
+.btn-inverse {
+	background-color: $trout;
+	*background-color: $trout;
+	background-image: linear-gradient(to bottom, $trout, $trout);
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 -1px 0 $trout;
+
+	&.active {
+		@extend %extend_btn_inverse_states;
+		background-color: $trout \9;
+		color: $white;
+	}
+
+	&:hover {
+		@extend %extend_btn_inverse_states;
+	}
+	
+	&:active {
+		@extend %extend_btn_inverse_states;
+		background-color: $trout \9;
+	}
+
+	&.disabled {
+		@extend %extend_btn_inverse_states;
+	}
+	
+	.caret {
+		border-top-color: $white;
+		border-bottom-color: $white;
+	}
+}
+
+.btn-gray {
+	background-color: lighten($trout, 30%);
+	*background-color: lighten($trout, 30%);
+	background-image: linear-gradient(to bottom, lighten($trout, 30%), lighten($trout, 30%));
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff3f3f3', endColorstr='#ffeeeeee', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 -1px 0 $white;
+	
+	&.active {
+		color: $trout;
+		@extend %extend_btn_gray_states;
+		background-color: lighten($trout, 30%) \9;
+	}
+
+	&:hover {
+		@extend %extend_btn_gray_states;
+	}
+	
+	&:active {
+		@extend %extend_btn_gray_states;
+		background-color: lighten($trout, 30%) \9;
+	}
+	
+	&.disabled {
+		@extend %extend_btn_gray_states;
+	}
+}
+
+.btn-bright {
+	background-color: $astra;
+	*background-color: $astra;
+	background-image: linear-gradient(to bottom, $white, $astra);
+	background-repeat: repeat-x;
+	border-color: $trout $trout $trout;
+	color: $white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefdd7', endColorstr='#fffdfba5', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow: 0 -1px 0 $trout;
+	
+	&:hover {
+		@extend %extend_btn_bright_states;
+	}
+	&:active {
+		@extend %extend_btn_bright_states;
+		background-color: $astra \9;
+	}
+	&.active {
+		@extend %extend_btn_bright_states;
+		background-color: $astra \9;
+	}
+
+	&.disabled {
+		@extend %extend_btn_bright_states;
+	}
+}
+
+.btn-bright[disabled] {
+	@extend %extend_btn_bright_states;
+}
+
+.btn-primary[disabled] {
+	@extend %extend_btn_primary_states;
+}
+
+.btn-warning[disabled] {
+	@extend %extend_btn_warning_states;
+}
+
+.btn-danger[disabled] {
+	@extend %extend_btn_danger_states;
+}
+
+.btn-success[disabled] {
+	@extend %extend_btn_success_states;
+}
+
+.btn-info[disabled] {
+	@extend %extend_btn_info;
+}
+
+.btn-inverse[disabled] {
+	@extend %extend_btn_inverse_states;
+}
+
+.btn-gray[disabled] {
+	@extend %extend_btn_gray_states;
+}
+
+.btn-link {
+	@extend %extend_btn_link;
+	border-color: transparent;
+	cursor: pointer;
+	color: $trout;
+	border-radius: 0;
+	
+	&:active {
+		@extend %extend_btn_link;
+	}
+	
+	&:hover {
+		background-color: transparent;
+		color: $trout;
+		text-decoration: underline;
+	}
+}
+
+.btn-link[disabled] {
+	@extend %extend_btn_link;
+
+	&:hover {
+		color: $trout;
+		text-decoration: none;
+	}
+}
+
+.btn-group {
+	display: inline-block;
+	*display: inline;
+	font-size: 0;
+	*margin-left: .3em;
+	position: relative;
+	vertical-align: middle;
+	white-space: nowrap;
+	*zoom: 1;
+	
+	&:first-child {
+		*margin-left: 0;
+	}
+	
+	> {
+		
+		.btn {
+			border-radius: 0;
+			font-size: 15px;
+			position: relative;
+
+			+ {
+
+				.btn {
+					margin-left: -1px;
+				}
+
+				.dropdown-toggle {
+					box-shadow: inset 1px 0 0 $white, inset 0 1px 0 $white, 0 1px 2px $trout;
+					*padding-bottom: 5px;
+					padding-left: 8px;
+					padding-right: 8px;
+					*padding-top: 5px;
+				}
+			}
+
+			&:first-child {
+				border-bottom-left-radius: 4px;
+				border-top-left-radius: 4px;
+				margin-left: 0;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: 4px;
+				border-top-right-radius: 4px;
+			}
+
+			&.large {
+
+				&:first-child {
+					border-bottom-left-radius: 6px;
+					border-top-left-radius: 6px;
+					margin-left: 0;
+				}
+
+				&:last-child {
+					border-bottom-right-radius: 6px;
+					border-top-right-radius: 6px;
+				}
+			}
+
+			&:hover {
+				z-index: 2;
+			}
+
+			&:focus {
+				z-index: 2;
+			}
+
+			&:active {
+				z-index: 2;
+			}
+
+			&.active {
+				z-index: 2;
+			}
+		}
+
+		.dropdown-menu {
+			font-size: 15px;
+		}
+
+		.btn-mini {
+			font-size: 11px;
+
+			+ .dropdown-toggle {
+				*padding-bottom: 2px;
+				padding-left: 5px;
+				padding-right: 5px;
+				*padding-top: 2px;
+			}
+		}
+
+		.btn-small {
+			font-size: 12px;
+
+			+ .dropdown-toggle {
+				*padding-bottom: 4px;
+				*padding-top: 5px;
+			}
+		}
+
+		.btn-large {
+			font-size: 16px;
+
+			+ .dropdown-toggle {
+				*padding-bottom: 7px;
+				padding-left: 12px;
+				padding-right: 12px;
+				*padding-top: 7px;
+			}
+		}
+
+		.dropdown-toggle {
+			border-bottom-right-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+
+		.large.dropdown-toggle {
+			border-bottom-right-radius: 6px;
+			border-top-right-radius: 6px;
+		}
+	}
+
+	&.open {
+
+		.dropdown-toggle {
+			background-image: none;
+			box-shadow: inset 0 2px 4px $trout, 0 1px 2px $trout;
+			outline: 0;
+		}
+
+		.btn.dropdown-toggle {
+			background-color: $olivine;
+		}
+
+		.btn-primary.dropdown-toggle {
+			background-color: $olivine;
+		}
+
+		.btn-warning.dropdown-toggle {
+			background-color: $olivine;
+		}
+
+		.btn-danger.dropdown-toggle {
+			background-color: $olivine;
+		}
+
+		.btn-success.dropdown-toggle {
+			background-color: $olivine;
+		}
+
+		.btn-info.dropdown-toggle {
+			background-color: $olivine;
+		}
+
+		.btn-inverse.dropdown-toggle {
+			background-color: $olivine;
+		}
+	}
+
+	+ .btn-group {
+		margin-left: 5px;
+	}
+
+	.dropdown-toggle:active {
+		outline: 0;
+	}
+}
+
+.btn-toolbar {
+	font-size: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+
+	.btn + {
+		 
+	 	.btn {
+	  	margin-left: 5px;
+	 	}
+
+	 	.btn-group {
+	 		margin-left: 5px;
+	 	}
+	}
+
+	.btn-group + {
+
+		.btn {
+			margin-left: 5px;
+		}
+	}
+}
+
+.btn-group-vertical {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	
+	.btn {
+		border-radius: 0;
+		display: block;
+		float: none;
+		width: 100%;
+		
+		&:first-child {
+			border-radius: 4px 4px 0 0;
+		}
+		
+		&:last-child {
+			border-radius: 0 0 4px 4px;
+		}
+		
+		+ .btn {
+			margin-left: 0;
+			margin-top: -1px;
+		}
+	}
+	
+	.btn-large {
+
+		&:first-child {
+			border-radius: 6px 6px 0 0;
+		}
+
+		&:last-child {
+			border-radius: 0 0 6px 6px;
+		}
+	}
+}
+
+input[type="reset"].btn-block {
+	width: 100%;
+}
+
+input[type="button"].btn-block {
+	width: 100%;
+}
+
+.dropup .btn-large .caret {
+	border-bottom-width: 5px;
+}

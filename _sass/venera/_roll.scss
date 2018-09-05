@@ -1,0 +1,55 @@
+/* Venera roll styles */
+
+.roll-link {
+	display: inline-block;
+	*display: inline;
+	font-weight: bold;
+	overflow: hidden;
+	perspective: 100px;
+	perspective-origin: 50% 50%;
+	vertical-align: top;
+	*vertical-align: auto;
+
+	&.roll-red {
+		color: $monza;
+		
+		&:hover span {
+			background: $monza;
+		}
+		
+		span:after {
+			background: $monza;
+		}
+	}
+	
+	&:hover {
+		text-decoration: none;
+		
+		span {
+			background: $tradewin;
+			transform: translate3d(0px, 0, -40px) rotateX(90deg);
+		}
+	}
+	
+	span {
+		display: block;
+		padding: 0 2px;
+		position: relative;
+		transform-origin: 50% 0 50%;
+		transform-style: preserve-3d;
+		transition: all 600ms ease;
+
+		&:after {
+			background: $tradewin;
+			color: $white;
+			content: attr(data-title);
+			display: block;
+			left: 0;
+			padding: 0 2px;
+			position: absolute;
+			top: 0;
+			transform-origin: 50% 0 50%;
+			transform: translate3d(0px, 105%, 0) rotateX(-90deg);
+		}
+	}
+}
