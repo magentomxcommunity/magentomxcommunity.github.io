@@ -1,0 +1,15 @@
+robert_rawlins:
+  name: Robert Rawlins
+  email: robert@sorryapp.com
+  web: http://twitter.com/sirrawlins
+  bio: >-
+    Nulla semper tincidunt rutrum. Proin consectetur, 
+    nisi ac con gue accumsan, lorem odio pretium quam, 
+    quis vestibulum nunc felis ut turpis. 
+    Nullam vulputate euismod urna non pharetra. 
+    Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et.
+  picture: /assets/images/test-user.png
+robin_geall:
+  name: Robin Geall
+  email: robin@sorryapp.com
+  web: http://twitter.com/robingeall

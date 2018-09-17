@@ -102,7 +102,7 @@ a.thumbnail:hover {
 }
 
 .thumbnail-hover-text {
-	color: lighten($trout, 20%);
+	color: $white;
 
 	@media (min-width: 768px) and (max-width: 979px) {
 		display: none;

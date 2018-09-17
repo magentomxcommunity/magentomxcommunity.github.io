@@ -1,35 +1,8 @@
 /* Default alerts */
-//colors
-$white_50: rgba(255, 255, 255, 0.5);
-$color_solitaire_approx: #fcf8e3;
-$color_tussock_approx: #c09853;
-$color_astra_approx: #f7ecb5;
-$color_willow_brook_approx: #dff0d8;
-$color_beryl_green_approx: #d6e9c6;
-$color_hippie_green_approx: #468847;
-$color_pixie_green_approx: #c1e2b3;
-$color_vanilla_ice_approx: #f2dede;
-$color_chestnut_approx: #b94a48;
-$color_rose_fog_approx: #e4b9b9;
-$color_link_water_approx: #d9edf7;
-$color_charlotte_approx: #bce8f1;
-$color_boston_blue_approx: #3a87ad;
-$color_regent_st_blue_approx: #afd9ee;
-
-//@extend-elements
-//original selectors
-//.alert-danger, .alert-error
-%extend_alert_danger_error {
-	background-color: $cadillac;
-	border-color: $cadillac;
-	box-shadow: 3px 3px 0 0 $monza;
-	color: $white;
-}
-
 
 .alert {
 	background-color: $astra;
-	box-shadow: 3px 3px 0 0 $astra;
+	box-shadow: 3px 3px 0 0 darken($astra, 10%);
 	color: $trout;
 	font-size: 16px;
 	margin-bottom: 20px;
@@ -52,21 +25,20 @@ $color_regent_st_blue_approx: #afd9ee;
 	background-color: $olivine;
 	border-color: $aqua-forest;
 	box-shadow: 3px 3px 0 0 $aqua-forest;
-	color: $trout;
-}
-
-.alert-danger {
-	@extend %extend_alert_danger_error;
+	color: $white;
 }
 
 .alert-error {
-	@extend %extend_alert_danger_error;
+	background-color: $monza !important;
+	border-color: $cadillac;
+	box-shadow: 3px 3px 0 0 $cadillac;
+	color: $white;
 }
 
 .alert-info {
-	background-color: $tradewin;
-	border-color: $tradewin;
-	box-shadow: 3px 3px 0 0 $trout;
+	background-color: $curious-blue;
+	border-color: $lochmara;
+	box-shadow: 3px 3px 0 0 $lochmara;
 	color: $white;
 }
 

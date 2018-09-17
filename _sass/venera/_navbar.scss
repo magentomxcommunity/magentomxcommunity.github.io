@@ -152,6 +152,9 @@
 //.nav-tabs >.active >a, .nav-tabs >.active >a:hover
 %extend_tabs_active {
   background-color: $white;
+  border-top: 1px solid $aqua_forest;
+  border-left: 1px solid $aqua_forest;
+  border-right: 1px solid $aqua_forest;
   box-shadow: none;
   color: $trout;
   cursor: default;
@@ -1442,9 +1445,9 @@
 
     > a {
       @extend %extend_tabs_pills_li;
-      background-color: $astra;
+      background-color: $olivine;
       box-shadow: 0 -2px 1px $trout inset;
-      color: $olivine;
+      color: $white;
       font-size: 16px;
       line-height: 20px;
       padding-bottom: 12px;
@@ -1452,7 +1455,7 @@
       text-transform: uppercase;
 
       &:hover {
-        background-color: $astra;
+        background-color: $aqua_forest;
         border-color: $trout $trout $trout;
         color: $white;
       }
@@ -1513,11 +1516,11 @@
 }
 
 .nav-pills {
-  background-color: lighten($astra, 10%);
-  border-bottom: 1px solid $astra;
-  border-left: 1px solid $astra;
-  border-top: 1px solid $astra;
-  box-shadow: 0 1px 4px 1px $trout, 2px 2px 1px 0 $white inset;
+  background-color: $aqua_forest;
+  border-bottom: 1px solid $aqua_forest;
+  border-left: 1px solid $aqua_forest;
+  border-top: 1px solid $aqua_forest;
+  box-shadow: 0 1px 4px 1px $trout, 2px 2px 1px 0 $aqua_forest inset;
   margin-bottom: 0;
   padding: 8px 15px;
   *zoom: 1;
